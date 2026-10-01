@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retail Inventory Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside>
+  <div class="brand"><div class="logo">RI</div><div><b>Retail Inventory</b><small>Management System</small></div></div>
+  <nav id="nav"></nav>
+  <div class="src">Data source<b>Iranian Snack &amp; Chips</b></div>
+</aside>
+<main>
+  <header class="top">
+    <div><div class="eyebrow">Retail operations</div><h1 id="title"></h1><p class="sub" id="sub"></p></div>
+    <div><input type="file" id="csv" accept=".csv" hidden>
+      <button class="btn" id="imp">Import dataset</button>
+      <button class="btn dark" id="add">+ Add product</button></div>
+  </header>
+  <section id="view"></section>
+</main>
+
+<dialog id="dlg">
+  <h2>Add product</h2>
+  <label>Product name</label><input id="f_name">
+  <div class="row2"><div><label>Category</label><input id="f_cat" value="Snacks"></div><div><label>Weight (g)</label><input id="f_w" type="number" min="0"></div></div>
+  <div class="row2"><div><label>Price (Rial)</label><input id="f_price" type="number" min="0"></div><div><label>Cost (Rial)</label><input id="f_cost" type="number" min="0"></div></div>
+  <div class="row2"><div><label>Opening stock</label><input id="f_stock" type="number" min="0" value="0"></div><div><label>Expiry date</label><input id="f_exp" type="date"></div></div>
+  <div class="acts"><button class="btn" id="f_cancel">Cancel</button><button class="btn dark" id="f_save">Save product</button></div>
+</dialog>
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
